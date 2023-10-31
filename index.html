@@ -9,32 +9,63 @@
 </head>
 <body>
     <header>
-        <a href="phone.html">Phone</a>
-        <img src="images/SquareEyes_Logo-white.png" class="logo" alt="squareeyeslogo">
-        <p class="signin">SIGN IN</p>
-        <i class="fas fa-magnifying-glass"></i>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html" class="active"><i class="fas fa-house"></i> Home</a>
-                </li>
-                <li>
-                    <a href="videos.html"><i class="fas fa-film"></i> Videos</a>
-                </li>
-                <li>
-                    <a href="about.html"><i class="fas fa-circle-info"></i> About</a>
-                </li>
-                <li>
-                    <a href="contact.html"><i class="fas fa-phone"></i> Contact</a>
-                </li>
-            </ul>
-        </nav>
+        <span class="logo">
+            <img src="images/SquareEyes_Logo-white.png" class="logostyle" alt="squareeyeslogo">
+        </span>
+            <div class="menu">
+                
+                <input type="checkbox" id="search">
+                    <label for="search">
+                    <i class="fas fa-magnifying-glass"></i>
+                    </label>
+                <i class="fas fa-user"></i>
+                
+            </div>
+            <input type="checkbox" id="hamburger-menu">
+                    <label for="hamburger-menu">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                <nav class="links">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="active"><i class="fas fa-house"></i> Home<i class="fas fa-angle-double-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="videos.html"><i class="fas fa-film"></i> Videos<i class="fas fa-angle-double-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="about.html"><i class="fas fa-circle-info"></i> About<i class="fas fa-angle-double-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="contact.html"><i class="fas fa-phone"></i> Contact<i class="fas fa-angle-double-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+        
+        <div class="search-bar">
+            <div class="search-bar-style">Content</div>
+        </div>
     </header>
     <main>
         <h1>Home</h1>
+        <div class="signups">
+            <p id="start">START WATCHING</p>
+            <a href="videos.html" id="signup">SIGN UP</a>
+            <p id="signin">SIGN IN</p>
+        </div>
+        <div class="front-movies">
+            <img src="images/Square_Eyes_Cover1.jpeg" class="leftmovie" alt="fastandfurious movie cover">
+            <img src="images/Square_Eyes_Cover7.jpeg" class="movie" alt="batman movie cover">
+            <img src="images/Square_Eyes_Cover2.jpeg" class="rightmovie" alt="godzilla movie cover">
+        </div>
+        <div class="chevrons">
+            <i class="fas fa-circle-chevron-right"></i>
+            <i class="fas fa-circle-chevron-left"></i>
+        </div>
     </main>
     <footer>
-        <p>&copy 2023 All Rights Reserved</p>
+        <p>flex-grow</p>
+        <p>&copy; 2023 All Rights Reserved</p>
         <div class="socialmedia">
              <i class="fab fa-instagram"></i>
              <i class="fab fa-facebook"></i>
