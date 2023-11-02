@@ -7,7 +7,9 @@
 body {
     background-color:green;
     background-image: url(/images/background.jpg);
-    background-size: cover;
+    background-size: none;
+  
+    
 }
 
 h1 {
@@ -15,16 +17,40 @@ h1 {
     right: 9999px;
 }
 
-h2, h3, p {
+h2, h3, h4 {
+    background-color:#0B3470;
+}
+
+h2, h3, h4, p {
     color:white;
     font-family:Verdana, sans-serif;
 }
 
-#aboutus h2, h3, p {
+.aboutus > .abouth2, .abouth3, .paragraph1, .paragraph2 {
     display:flex;
     margin: 0 auto;
     width: 400px;
     padding-top: 30px;
+}
+
+.aboutus > .abouth2 {
+    background-color:#0B3470;
+    padding: 10px 50px;
+}
+
+.aboutus > .abouth3 {
+    background-color:#000E23;
+    padding:20px 50px;
+}
+
+.aboutus > .paragraph1 {
+    background-color:black;
+    padding: 10px 50px;
+}
+
+.aboutus > .paragraph2 {
+    background-color:#000E23;
+    padding:10px 50px;
 }
 
 header, footer {
@@ -49,8 +75,7 @@ header, footer {
 }
 
 .menu {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    display: flex;
     justify-content: center;
     background-color:black;
     padding: 10px 0;
@@ -60,11 +85,12 @@ header, footer {
     margin: 0 70px;
 }
 
-.menu .fa-magnifying-glass {
+.fa-user {
     position:relative;
-    left:120px;
-    font-size: 20px;
+    left: 110px;
 }
+
+
 
 #hamburger-menu, #search {
     display:none;
@@ -73,14 +99,15 @@ header, footer {
 #hamburger-menu:checked ~ .links {
     display:flex;
     justify-content:center;
+    z-index: 1;
 }
 
 .fa-bars {
     display:flex;
-    justify-content:center;
     position:relative;
     bottom:30px;
-    right:200px;
+    max-width:20px;
+    margin-left: 50px;
 }
 
 .links {
@@ -91,6 +118,10 @@ header, footer {
     list-style-type: none;
     background-color: #000E23;
     width: 230px;
+    z-index: 1;
+    position:relative;
+    right:70px;
+    bottom: 20px;
 }
 
 .links li {
@@ -109,35 +140,38 @@ header, footer {
     word-spacing: 10px;
 }
 
-%.fa-magnifying-glass {
+.links i:last-child {
+    float:right;
+}
+
+.test-bar {
+    display:none;
+    color:red;
+    background-color:white;
+    border-radius: 60px;
+    padding: 0px 20px;
+    margin: 0px;
+    width: 0px;
+    animation-name: bar;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+
+.fa-magnifying-glass {
     position:relative;
-    left: 125px;
+    left:400px;
     font-size: 20px;
-    color: white;
 }
 
 .fa-user {
     font-size: 20px;
 }
 
-.search-bar {
-    display:none;
-    justify-content:center;
-    position:relative;
-    bottom: 16px;
-    right: 16px;
+#search:checked ~ .test-bar {
+    display:inline-block;
 }
 
-.search-bar-style {
-    color:rgb(255 255 255 /0%);
-    background-color: white;
-    width:0px;
-    border-radius: 60px;
-    padding: 6px 20px;
-    animation-name: bar;
-    animation-duration: 300ms;
-    animation-fill-mode:forwards;
-}
+
 
 @keyframes bar {
     0% {
@@ -160,10 +194,16 @@ i {
 .movies img {
     height: 300px;
     width: 200px;
-    padding: 0 10px 20px 10px;
+    margin: 0 10px 20px 10px;
+    object-fit:contain;
+}
+
+.movies > a {
+    margin:0;
 }
 
 .movies {
+    margin-top: 50px;
     display:grid;
     grid-template-columns: auto auto;
     justify-content:center;
@@ -191,6 +231,8 @@ i {
 
 #signup {
     text-align:center;
+    position:relative;
+    right: 5px;
     background-color:red;
     color:white;
     padding: 15px 20px;
@@ -202,6 +244,8 @@ i {
 }
 
 #start {
+    display:flex;
+    justify-content:center;
     text-align:center;
     width: 150px;
     margin-top: 10px;
@@ -216,13 +260,14 @@ i {
     display: flex;
     flex-direction: row;
     justify-content:center;
-    width: 100vw;
+    max-width: 100vw;
 }
 
 .front-movies > img {
     max-height: 300px;
     max-width: 200px;
     padding: 0 10px;
+    object-fit:cover;
 }
 
 .chevrons {
@@ -268,18 +313,6 @@ i {
     color: rgb(255 255 255 /100%);
 }
 
-#genre-list {
-    color:white;
-    background-color:#0B3470;
-    display:none;
-    padding: 30px;
-    list-style-type:none;
-}
-
-#select:checked ~ #genre-list {
-    display:inline-block;
-}
-
 .genres {
     display:none;
     flex-direction:column;
@@ -293,23 +326,50 @@ i {
 
 .genres li {
     width: 100px;
-    padding: 10px 20px;
+    padding: 10px 50px;
     margin: 5px 0;
     list-style-type:none;
     background-color:#0B3470;
     border-radius: 50px;
 }
 
+.selection {
+    position:relative;
+    right:100px;
+    top:15px;
+    border-radius:50px;
+    z-index: 0;
+}
+
 .genre-selector {
+    text-align:center;
     display:flex;
-    align-self:center;
-    justify-self:center;
+    border-radius:50px;
+    flex-direction:row;
+    justify-content:center;
     color:white;
-    background-color:#0B3470;
-    padding: 30px 100px;
+    background-color:#D00000;
+    padding: 10px 50px;
     font-family: Verdana;
     font-size: 18px;
     width: 100px;
+}
+
+.genre-selector > i {
+    position:relative;
+    left: 15px;
+    top:3px;
+}
+
+.test {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    position:relative;
+}
+
+#category {
+    display:none;
 }
 
 #category:checked ~ .genres {
@@ -318,4 +378,204 @@ i {
 
 .fa-angle-double-down {
     color:white;
+}
+
+#contact {
+    background-color:#000E23;
+    padding: 20px 0;
+    display:flex;
+    justify-content:center;
+}
+
+.contact-sheet {
+    display:grid;
+    grid-template-columns: auto;
+    justify-content:center;
+    background-color:#0B3470;
+    padding: 20px 0;
+}
+
+.contact-sheet input, textarea {
+    margin: 10px 0;
+    font-family:Verdana, sans-serif;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+label {
+    color:white;
+    font-family:Verdana, sans-serif;
+    align-self:center;
+}
+
+.livechat {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    background-color:#000E23;
+    padding-block:50px;
+    margin-block: 20px;
+}
+
+.livechat img {
+    height: 70px;
+}
+
+#chat-1 {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-right:20px;
+}
+
+#chat-1 > p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#chat-2 {
+    margin-left:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+#chat-2 > h3 {
+    background-color:#0B3470;
+    font-size: 26px;
+    padding: 10px 30px;
+}
+
+#chat-2 > p {
+    font-size:14px;
+    margin-bottom: 5px;
+}
+
+.product {
+    background-color:#0B3470;
+    padding: 20px 30px;
+}
+
+.productpreview {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.productpreview h2 {
+    background:none;
+}
+
+.addtocart p {
+    background-color:#287006;
+    padding: 15px 30px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.addtocart a {
+    text-decoration:none;
+}
+
+.addtocart i {
+    font-size:20px;
+    margin-left:10px;
+}
+
+.productpreview > img {
+    height: 250px;
+    margin: 10px 30px;
+}
+
+.description {
+    background-color:#000E23;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.description > p {
+    max-width: 600px;
+}
+
+.readmore {
+    color:#5599FF;
+}
+
+.trailer {
+    background-image: url(/images/godzilla-trailer.jpg);
+    background-size:none;
+    background-repeat:no-repeat;
+    background-position:center;
+    padding: 200px 50px 10px 50px;
+    display:flex;
+    justify-content:center;
+    margin: 50px 10px;
+}
+
+.trailer > p {
+    font-size: 24px;
+    position:relative;
+    right:100px;
+}
+
+.item {
+    background-color:#000E23;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    padding: 10px 0px;
+}
+
+.fa-trash::after {
+    color:#D00000;
+}
+
+.item > img {
+    height: 100px;
+}
+
+.movie-container {
+    text-align:center;
+}
+
+.heavy {
+    font-weight:bold;
+}
+
+.cart > h4 {
+    padding: 20px;
+}
+
+#trash:checked ~ .item {
+    display:none;
+}
+
+#trash:checked ~ .fa-trash::after {
+    display:none;
+}
+
+#trash {
+    display:none;
+}
+
+.control-me::after {
+    content:"Test Test";
+    font-size:30px;
+    color:white;
+}
+
+#toggle:checked ~ .control-me::after {
+    display:none;
+}
+
+#toggle:checked ~ label {
+    display:none;
 }

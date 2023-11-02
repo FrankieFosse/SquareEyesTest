@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d753c6feaf.js" crossorigin="anonymous"></script>
-    <title>Contact</title>
+    <title>Product</title>
 </head>
 <body>
     <header>
@@ -29,7 +29,7 @@
                 <nav class="links">
                     <ul>
                         <li>
-                            <a href="index.html" class="active"><i class="fas fa-house"></i> Home<i class="fas fa-angle-double-right"></i></a>
+                            <a href="index.html"><i class="fas fa-house"></i> Home<i class="fas fa-angle-double-right"></i></a>
                         </li>
                         <li>
                             <a href="videos.html"><i class="fas fa-film"></i> Videos<i class="fas fa-angle-double-right"></i></a>
@@ -41,39 +41,39 @@
                             <a href="contact.html"><i class="fas fa-phone"></i> Contact<i class="fas fa-angle-double-right"></i></a>
                         </li>
                     </ul>
-                </nav>
-        
+                </nav> 
     </header>
-    <main>
-       <h2 id="contact">Contact us</h2>
-       <div class="contact-sheet">
-            <label for="firstname">First name:</label>
-            <input type="text" id="firstname" name="user_name">
-            <label for="lastname">Last name:</label>
-            <input type="text" id="lastname" name="user_name">
-            <label for="mail">Email:</label>
-            <input type="email" id="mail" name="user_email">
-            <label for="msg">What can we help you with?</label>
-            <textarea id="msg" name="user_message"></textarea>
+<main>
+    <div class="cart">
+    <h4>Cart:</h4>
+    </div>
+    <input type="checkbox" id="trash">
+    <label for="trash">
+    <i class="fas fa-trash"></i>
+    </label>
+    <div class="item">
+        <img src="images\Square_Eyes_Cover2.jpeg" alt="Godzilla cover">
+        <div class="movie-container">
+            <p class="heavy">Godzilla: King of the Monsters</p>
+            <p>NOK 99.00</p>
         </div>
-        <div class="livechat">
-            <div id="chat-1">
-            <p>LIVE CHAT</p>
-            <img src="images\speaking-bubbles-b-icon.png" alt="chat bubbles">
-            </div>
-            <div id="chat-2">
-            <p>Chat with one of our members</p>
-            <h3>START CHAT</h3>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy 2023 All Rights Reserved</p>
-        <div class="socialmedia">
-             <i class="fab fa-instagram"></i>
-             <i class="fab fa-facebook"></i>
-             <i class="fab fa-youtube"></i>
-        </div>
-    </footer>
+    </div>
+
+    <div>
+        <label for="toggle">Toggle</label>
+        <input type="checkbox" id="toggle" class="visually-hidden">
+        <div class="control-me"></div>
+    </div>
+    
+</main>
+<footer>
+    <p>flex-grow</p>
+    <p>&copy; 2023 All Rights Reserved</p>
+    <div class="socialmedia">
+         <i class="fab fa-instagram"></i>
+         <i class="fab fa-facebook"></i>
+         <i class="fab fa-youtube"></i>
+    </div>
+</footer>
 </body>
 </html>
