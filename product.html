@@ -13,13 +13,24 @@
             <img src="images/SquareEyes_Logo-white.png" class="logostyle" alt="squareeyeslogo">
         </span>
             <div class="menu">
-                
-                <input type="checkbox" id="search">
-                    <label for="search">
-                    <i class="fas fa-magnifying-glass"></i>
-                    </label>
-                    <div class="test-bar">Content</div>
+                <nav class="desktoplinks">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="active"><i class="fas fa-house"></i> Home</a>
+                        </li>
+                        <li>
+                            <a href="videos.html"><i class="fas fa-film"></i> Videos</a>
+                        </li>
+                        <li>
+                            <a href="about.html"><i class="fas fa-circle-info"></i> About</a>
+                        </li>
+                        <li>
+                            <a href="contact.html"><i class="fas fa-phone"></i> Contact</a>
+                        </li>
+                    </ul>
+                </nav>
                     <i class="fas fa-user"></i>
+                    
             </div>
 
             <input type="checkbox" id="hamburger-menu">
@@ -29,7 +40,7 @@
                 <nav class="links">
                     <ul>
                         <li>
-                            <a href="index.html"><i class="fas fa-house"></i> Home<i class="fas fa-angle-double-right"></i></a>
+                            <a href="index.html" class="active"><i class="fas fa-house"></i> Home<i class="fas fa-angle-double-right"></i></a>
                         </li>
                         <li>
                             <a href="videos.html"><i class="fas fa-film"></i> Videos<i class="fas fa-angle-double-right"></i></a>
@@ -42,15 +53,28 @@
                         </li>
                     </ul>
                 </nav>
-        
     </header>
     <main>
+        <h1>Product</h1>
         <div class="product">
         <h2>Godzilla: King of the Monsters</h2>
         <h4>2019 - PG-13 - 2h 12m</h4>
         </div>
+        <nav class="crumbs">
+            <ol>
+                <li class="crumb">
+                    <a href="index.html">Home</a>
+                </li>
+               <li class="crumb">
+                    <a href="videos.html">Videos</a>
+               </li>
+               <li class="crumb">
+                    Godzilla: King of the Monsters
+               </li>
+            </ol>
+        </nav>
         <div class="productpreview">
-            <img src="images\Square_Eyes_Cover2.jpeg" alt="Godzilla cover">
+            <img src="images/Square_Eyes_Cover2.jpeg" alt="Godzilla cover">
             <div class="addtocart">
             <h2>NOK 99.00</h2>
             <a href="checkout.html">
@@ -63,14 +87,20 @@
                 of god-sized monsters, including the mighty Godzilla,
                 who collides with Mothra, Rodan, and his ultimate nemesis,
                  the three-headed King Ghidorah...<p class="readmore">Read more</p>
-            </p>
         </div>
         <div class="trailer">
-            <p><i class="fas fa-play"></i>Trailer 2:14</p>
+            
+            
+            <!--<iframe width="1264" height="480" src="https://www.youtube.com/embed/wVDtmouV9kM?autoplay=1&mute=1" title="Godzilla: King of the Monsters - Official Trailer 1 - Now Playing In Theaters" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
         </div>
+        <div class="video">
+        <video width="620" autoplay muted>
+            <source src="images/godzilla-trailer.mp4" type="video/mp4">
+        </video>
+        </div>
+    
     </main>
     <footer>
-        <p>flex-grow</p>
         <p>&copy; 2023 All Rights Reserved</p>
         <div class="socialmedia">
              <i class="fab fa-instagram"></i>

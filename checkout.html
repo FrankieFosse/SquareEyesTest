@@ -13,13 +13,24 @@
             <img src="images/SquareEyes_Logo-white.png" class="logostyle" alt="squareeyeslogo">
         </span>
             <div class="menu">
-                
-                <input type="checkbox" id="search">
-                    <label for="search">
-                    <i class="fas fa-magnifying-glass"></i>
-                    </label>
-                    <div class="test-bar">Content</div>
+                <nav class="desktoplinks">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="active"><i class="fas fa-house"></i> Home</a>
+                        </li>
+                        <li>
+                            <a href="videos.html"><i class="fas fa-film"></i> Videos</a>
+                        </li>
+                        <li>
+                            <a href="about.html"><i class="fas fa-circle-info"></i> About</a>
+                        </li>
+                        <li>
+                            <a href="contact.html"><i class="fas fa-phone"></i> Contact</a>
+                        </li>
+                    </ul>
+                </nav>
                     <i class="fas fa-user"></i>
+                    
             </div>
 
             <input type="checkbox" id="hamburger-menu">
@@ -29,7 +40,7 @@
                 <nav class="links">
                     <ul>
                         <li>
-                            <a href="index.html"><i class="fas fa-house"></i> Home<i class="fas fa-angle-double-right"></i></a>
+                            <a href="index.html" class="active"><i class="fas fa-house"></i> Home<i class="fas fa-angle-double-right"></i></a>
                         </li>
                         <li>
                             <a href="videos.html"><i class="fas fa-film"></i> Videos<i class="fas fa-angle-double-right"></i></a>
@@ -41,33 +52,49 @@
                             <a href="contact.html"><i class="fas fa-phone"></i> Contact<i class="fas fa-angle-double-right"></i></a>
                         </li>
                     </ul>
-                </nav> 
+                </nav>
     </header>
 <main>
+    <h1>Checkout</h1>
     <div class="cart">
     <h4>Cart:</h4>
+    <nav class="crumbs">
+        <ol>
+            <li class="crumb">
+                <a href="index.html">Home</a>
+            </li>
+           <li class="crumb">
+                <a href="videos.html">Videos</a>
+           </li>
+           <li class="crumb">
+                <a href="product.html">Godzilla: King of the Monsters</a>
+           </li>
+           <li class="crumb">
+            Check-out
+            </li>
+        </ol>
+    </nav>
     </div>
     <input type="checkbox" id="trash">
     <label for="trash">
     <i class="fas fa-trash"></i>
     </label>
     <div class="item">
-        <img src="images\Square_Eyes_Cover2.jpeg" alt="Godzilla cover">
+        <img src="images/Square_Eyes_Cover2.jpeg" alt="Godzilla cover">
         <div class="movie-container">
             <p class="heavy">Godzilla: King of the Monsters</p>
             <p>NOK 99.00</p>
         </div>
     </div>
 
-    <div>
-        <label for="toggle">Toggle</label>
-        <input type="checkbox" id="toggle" class="visually-hidden">
-        <div class="control-me"></div>
+    <div class="paynow">
+        <a href="success.html">
+        <h3>Pay now</h3>
+        </a>
     </div>
     
 </main>
 <footer>
-    <p>flex-grow</p>
     <p>&copy; 2023 All Rights Reserved</p>
     <div class="socialmedia">
          <i class="fab fa-instagram"></i>
