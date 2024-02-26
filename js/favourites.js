@@ -1,6 +1,7 @@
 import {  addToCart, cart } from "./utils.js"
 
 const out = document.getElementById("cartContainer"); 
+const payNow3 = document.getElementById("payNowContainer");
 
 async function inCart(cart) {
     try {
@@ -14,10 +15,9 @@ async function inCart(cart) {
         if (filtered.length > 0) {
             addToCart (filtered, out);
         } else {
-            out.innerHTML = `<p>Your cart is empty</p> 
-            <a href="index.html">Back to home</a>`;
-
-
+            out.innerHTML = `<div class="emptyCart"><p>Your cart is empty</p> 
+            <a href="index.html">Back to home</a></div>`;
+            payNow3.style.display = "none";
         }
 
     }catch (error) {
