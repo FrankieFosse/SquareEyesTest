@@ -9,6 +9,7 @@
     through the lens of a camera.">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d753c6feaf.js" crossorigin="anonymous"></script>
+    <script type="module" src="js/favourites.js" defer></script>
     <title>Product</title>
 </head>
 <body>
@@ -33,7 +34,7 @@
                         </li>
                     </ul>
                 </nav>
-                    <i class="fas fa-user"></i>
+                <a href="checkout.html"><i class="fas fa-cart-shopping"></i></a>
                     
             </div>
 
@@ -60,43 +61,11 @@
     </header>
 <main>
     <h1>Checkout</h1>
-    <div class="cart">
-    <h4>Cart:</h4>
-    <nav class="crumbs">
-        <ol>
-            <li class="crumb">
-                <a href="index.html">Home</a>
-            </li>
-           <li class="crumb">
-                <a href="videos.html">Videos</a>
-           </li>
-           <li class="crumb">
-                <a href="product.html">Godzilla: King of the Monsters</a>
-           </li>
-           <li class="crumb">
-            Check-out
-            </li>
-        </ol>
-    </nav>
-    </div>
-    <input type="checkbox" id="trash">
-    <label for="trash">
-    <i class="fas fa-trash"></i>
-    </label>
-    <div class="item">
-        <img src="images/Square_Eyes_Cover2.jpeg" alt="Godzilla cover">
-        <div class="movie-container">
-            <p class="heavy">Godzilla: King of the Monsters</p>
-            <p>NOK 99.00</p>
-        </div>
+    <div id="cartContainer"></div>
+    <div class="payNowContainer">
+    <a href="success.html" class="payNow2">Pay now</a>
     </div>
 
-    <div class="paynow">
-        <a href="success.html">
-        <h3>Pay now</h3>
-        </a>
-    </div>
-    
 </main>
 <footer>
     <p>&copy; 2023 All Rights Reserved</p>

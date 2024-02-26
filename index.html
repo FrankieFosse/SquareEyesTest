@@ -8,6 +8,8 @@
     a place where film enthusiasts gather to celebrate the magic of storytelling 
     through the lens of a camera.">
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/script.js" defer></script>
+    <script type="module" src="js/utils.js" defer></script>
     <script src="https://kit.fontawesome.com/d753c6feaf.js" crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
@@ -33,7 +35,7 @@
                         </li>
                     </ul>
                 </nav>
-                    <i class="fas fa-user"></i>
+                <a href="checkout.html"><i class="fas fa-cart-shopping"></i></a>
                     
             </div>
 
@@ -60,19 +62,8 @@
     </header>
     <main>
         <h1>Home</h1>
-        <div class="signups">
-            <p id="start">START WATCHING</p>
-            <div class="signup">SIGN UP</div>
-            <div class="signin">SIGN IN</div>
-        </div>
-        <div class="front-movies">
-            <img src="images/Square_Eyes_Cover1.jpeg" class="leftmovie" alt="fastandfurious movie cover">
-            <img src="images/Square_Eyes_Cover7.jpeg" class="movie" alt="batman movie cover">
-            <img src="images/Square_Eyes_Cover2.jpeg" class="rightmovie" alt="godzilla movie cover">
-        </div>
-        <div class="chevrons">
-            <i class="fas fa-circle-chevron-right"></i>
-            <i class="fas fa-circle-chevron-left"></i>
+        <div class="frontPageMovies">
+        <ul id="myVideos"></ul>
         </div>
     </main>
     <footer>

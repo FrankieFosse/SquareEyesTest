@@ -8,6 +8,8 @@
     a place where film enthusiasts gather to celebrate the magic of storytelling 
     through the lens of a camera.">
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/utils.js" defer></script>
+    <script type="module" src="js/genres.js" defer></script>
     <script src="https://kit.fontawesome.com/d753c6feaf.js" crossorigin="anonymous"></script>
     <title>Videos</title>
 </head>
@@ -33,7 +35,7 @@
                         </li>
                     </ul>
                 </nav>
-                    <i class="fas fa-user"></i>
+                <a href="checkout.html"><i class="fas fa-cart-shopping"></i></a>
                     
             </div>
 
@@ -60,34 +62,16 @@
     </header>
     <main>
         <h1>Videos</h1>
-        <div class="categories">
-        <input type="checkbox" id="category">
-               <label for="category" class="selection">
-                   <span class="genre-selector">
-                    Select genre<i class="fas fa-chevron-down"></i>
-                   </span>
-               </label>
-               <ul class="genres">
-                <li>Action</li>
-                <li>Comedy</li>
-                <li>Animation</li>
-                <li>Horror</li>
-            </ul>
-            </div>
-        
-       
-       <div class="movies">
-        <img src="images/Square_Eyes_Cover1.jpeg" alt="hobbs and shaw movie cover">
-        <a href="product.html">
-        <img src="images/Square_Eyes_Cover2.jpeg" alt="godzilla movie cover">
-        </a>
-        <img src="images/Square_Eyes_Cover3.jpeg" alt="once upon a time in hollywood movie cover">
-        <img src="images/Square_Eyes_Cover4.jpeg" alt="scream movie cover">
-        <img src="images/Square_Eyes_Cover5.jpeg" alt="sweetheart movie cover">
-        <img src="images/Square_Eyes_Cover6.jpeg" alt="addams family movie cover">
-        <img src="images/Square_Eyes_Cover7.jpeg" alt="batman movie cover">
-        <img src="images/Square_Eyes_Cover8.jpeg" alt="toy story movie cover">
-       </div>
+        <div class="selectorContainer">
+        <select id="genreSelector" name="genreSelector">
+            <option value="none" selected>Select genre</option>
+            <option>Action</option>
+            <option>Horror</option>
+            <option>Drama</option>
+            <option>Kids</option>
+        </select>
+        </div>
+        <div id="container"></div>
     </main>
     <footer>
         <p>&copy; 2023 All Rights Reserved</p>
